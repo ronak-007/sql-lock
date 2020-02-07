@@ -12,7 +12,6 @@ cache:
     - node_modules
 before_install:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS test;'
-  - npm update
 install:
   - npm install
 script:
