@@ -12,7 +12,7 @@ const getRandomKey = (): string => {
 
 export const delay = async (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-describe('DLM', () => {
+describe('sql-locker', () => {
   beforeAll(async () => {
     await initialize(Config.mysql_uri, { locking_ttl: 5000 });
     await delay(500);
