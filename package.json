@@ -1,6 +1,6 @@
 {
   "name": "sql-lock",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "distributed lock manager based on mysql",
   "main": "dist/index.js",
   "scripts": {
