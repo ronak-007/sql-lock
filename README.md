@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/ronak-007/sql-lock.svg?branch=master)](https://travis-ci.org/ronak-007/sql-lock)
+[![npm version](https://badge.fury.io/js/sql-lock.svg)](https://badge.fury.io/js/sql-lock)
+
 # sql-lock
 
 ```sql-lock``` is a NodeJS package which allows you to get distributed locks in your code. 
