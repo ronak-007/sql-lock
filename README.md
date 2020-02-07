@@ -17,15 +17,17 @@
 ```npm install sql-lock```
 
 ## Usage
-### Configuration
+### Initialization
 ```Javascript
 const sqlLock = require('sql-lock');
-sqlLock.initialize(mysqlUri, ttl);
+sqlLock.initialize(MysqlURI, TTL);
 ```
-### Usage
+ - MysqlURI - MySQL connection string
+ - TTL - Default timeout for your locks (in ms)
+### Code
 ```Javascript
 const sqlLock = require('sql-lock');
 const lockReleaser = await sqlLock.getLock('key'); //Get a lock
-//Do async work
+await someAsncWork();
 lockReleaser(); //Release lock
 ```
