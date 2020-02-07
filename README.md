@@ -27,6 +27,9 @@ sqlLock.initialize(MysqlURI, TTL);
 ```
  - MysqlURI - MySQL connection string
  - TTL - Default timeout for your locks (in ms)
+
+This will automatically create a table named `locks` in the database.
+ 
 ### Code
 ```Javascript
 const sqlLock = require('sql-lock');
