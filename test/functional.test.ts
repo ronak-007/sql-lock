@@ -22,6 +22,16 @@ describe('DLM', () => {
     const release = await getLock(lockKey, 2000);
     await release();
   });
+  test('lock timeout', async () => {
+    const lockKey = getRandomKey();
+    await getLock(lockKey, 1000); //Lock should be released after 1 second
+    const start = new Date();
+    const lockRelease = await getLock(lockKey);
+    const timeTaken = new Date().getTime() - start.getTime();
+    await lockRelease();
+    expect(timeTaken).toBeLessThan(4000);
+    expect(timeTaken).toBeGreaterThan(1000);
+  });
   test('try to get same lock twice - second lock will only be gotten after first releases lock', async () => {
     const lockKey = getRandomKey();
     const releaseLock = await getLock(lockKey, 5000);
