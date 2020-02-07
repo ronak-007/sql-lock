@@ -28,6 +28,12 @@ sqlLock.initialize(MysqlURI, TTL);
 ```Javascript
 const sqlLock = require('sql-lock');
 const lockReleaser = await sqlLock.getLock('key'); //Get a lock
-await someAsncWork();
+await someAsyncWork();
 lockReleaser(); //Release lock
 ```
+
+## Contributions
+Contributions are welcome. Please create a pull-request if you want to add new features, test-support or enhance the existing code.
+
+## License
+[MIT](https://github.com/ronak-007/sql-lock/blob/master/LICENSE)
