@@ -3,7 +3,13 @@
 
 # sql-lock
 
-```sql-lock``` is a NodeJS package which allows you to get distributed locks in your code. 
+```sql-lock``` is a distributed lock manager for NodeJS, which works with the help of a MySQL Server. 
+
+## Motivation
+There are a lot of use cases that require an exclusive access to a resource. In a distributed system, with several containers running the same piece of code in parallel, achieving consensus among all the containers gets quite convoluted. This entails intervention of a centralised locking mechanism controlled by a single entity deciding which processes uses the required piece of code exclusively at a time. Customisations as to who can access this piece of code in parallel and who cannot, with minimal starvation and without loss of consistency at any given point, is an added requirement.
+
+```sql-lock``` solves this problem, by allowing you to get distributed locks in your code from a MySQL server. 
+
 
 ## How does it work
 
